@@ -147,7 +147,7 @@ class TimecardBug {
 				plugin_history_log( $this->bug_id, 'timecard_updated', $this->__timecard, $this->timecard, null, 'Timecard' );
 
 			} else if ( $this->timecard ) {
-				plugin_history_log( $this->bug_id, 'timecard_added', $this->timecard, '', null, 'Timecard' );
+				plugin_history_log( $this->bug_id, 'timecard_added', '', $this->timecard, null, 'Timecard' );
 
 			} else if ( $this->__timecard ) {
 				plugin_history_log( $this->bug_id, 'timecard_removed', $this->__timecard, ' ', null, 'Timecard' );
@@ -160,7 +160,7 @@ class TimecardBug {
 				plugin_history_log( $this->bug_id, 'estimate_updated', $this->__estimate, $this->estimate, null, 'Timecard' );
 
 			} else if ( $this->estimate >= 0 ) {
-				plugin_history_log( $this->bug_id, 'estimate_added', $this->estimate, '', null, 'Timecard' );
+				plugin_history_log( $this->bug_id, 'estimate_added', '', $this->estimate, null, 'Timecard' );
 
 			} else if ( $this->__estimate >= 0 ) {
 				plugin_history_log( $this->bug_id, 'estimate_removed', $this->__estimate, ' ', null, 'Timecard' );
